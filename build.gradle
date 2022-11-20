@@ -1,0 +1,48 @@
+plugins {
+    id 'java-library'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'maven-publish'
+}
+
+group 'com.github.dramatisxh'
+version '0.1.1-beta'
+
+compileJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+javafx {
+    version = '17.0.2'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.media']
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = group
+            artifactId = 'aspectratiopane'
+            version = version
+
+            from components.java
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    filter{
+        exclude("**/ManualTest**")
+    }
+}

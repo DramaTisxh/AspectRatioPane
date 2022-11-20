@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import com.github.dramatisxh.aspectratiopane.AspectRatioPane?>
+
+<AspectRatioPane>
+   <Pane prefHeight="200.0" prefWidth="200.0" AspectRatioPane.alignment="TOP_LEFT" style="-fx-background-color: red;"/>
+   <Pane prefHeight="200.0" prefWidth="200.0" AspectRatioPane.alignment="BOTTOM_RIGHT" style="-fx-background-color: green;"/>
+   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;"/>
+</AspectRatioPane>
